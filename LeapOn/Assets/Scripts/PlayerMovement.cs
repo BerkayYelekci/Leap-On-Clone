@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public ScriptableBool isJumping;
+
     public float rotateSpeed = 5f;
     float radius;
 
@@ -13,8 +15,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 centre;
     float angle;
     void Start()
-    {
-        
+    {    
         centre = chainSaw.transform.position;
         radius = Vector2.Distance(transform.position, chainSaw.transform.position);
     }
@@ -26,8 +27,11 @@ public class PlayerMovement : MonoBehaviour
     // Pulls the ball to the center of the scene
     void FallOnTheGround()
     {
-        float speed = fallSpeed * Time.deltaTime;
-        transform.position = Vector2.MoveTowards(transform.position, centre, speed);
+        if (!isJumping.value)
+        {
+            float speed = fallSpeed * Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, centre, speed);
+        }
     }
     // Rotates player clock-wise
     void RotatePlayer()
