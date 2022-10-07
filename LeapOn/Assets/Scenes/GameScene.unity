@@ -243,7 +243,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: JumpObject (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1726259034052696417, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
 --- !u!1001 &362085111
 PrefabInstance:
@@ -320,7 +321,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: JumpObject (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1726259034052696417, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
 --- !u!1 &406401225
 GameObject:
@@ -335,7 +337,7 @@ GameObject:
   - component: {fileID: 406401228}
   - component: {fileID: 406401229}
   m_Layer: 0
-  m_Name: GravityCenter
+  m_Name: Center
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -708,7 +710,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: JumpObject (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1726259034052696417, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
 --- !u!1001 &824594175
 PrefabInstance:
@@ -785,7 +788,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: JumpObject (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1726259034052696417, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
 --- !u!1 &892768772
 GameObject:
@@ -946,7 +950,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: JumpObject (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1726259034052696417, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
 --- !u!1001 &1276349474
 PrefabInstance:
@@ -1023,7 +1028,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: JumpObject (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1726259034052696417, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
 --- !u!4 &1310865573 stripped
 Transform:
@@ -1105,7 +1111,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: JumpObject (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1726259034052696417, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
 --- !u!4 &1457274927 stripped
 Transform:
@@ -1182,8 +1189,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1838693807}
   - component: {fileID: 1838693806}
-  - component: {fileID: 1838693811}
   - component: {fileID: 1838693808}
+  - component: {fileID: 1838693811}
   - component: {fileID: 1838693809}
   - component: {fileID: 1838693810}
   m_Layer: 0
@@ -1253,7 +1260,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838693805}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.5, z: 0}
+  m_LocalPosition: {x: 0, y: 3.5, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1275,8 +1282,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isJumping: {fileID: 11400000, guid: 8a9f020b72c6c054298ebffeca723cfd, type: 2}
-  rotateSpeed: 50
-  fallSpeed: 2.5
+  rotateSpeed: 3
+  fallSpeed: 1
   chainSaw: {fileID: 406401225}
 --- !u!58 &1838693809
 CircleCollider2D:
@@ -1309,7 +1316,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1324,12 +1331,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838693805}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06c22173295ffb040bc7fb0680d863ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 358e77d961519fc4c92dfb1da7d6cd4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityCenter: {fileID: 406401227}
-  forceAmount: 150
-  gravity: 0
+  center: {fileID: 406401227}
 --- !u!1001 &1930298353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1405,7 +1410,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: JumpObject (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1726259034052696417, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
 --- !u!1001 &2135220302203520359
 PrefabInstance:
@@ -1466,5 +1472,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: JumpObject
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1726259034052696417, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
