@@ -6,35 +6,42 @@ public class PlayerMovement : MonoBehaviour
 {
     public ScriptableBool isJumping;
 
-    public float rotateSpeed = 5f;
-    float radius;
+    public float rotateSpeed; 
 
     public float fallSpeed;
 
     public GameObject chainSaw;
-    Vector2 centre;
+    Vector2 center;
+    Vector2 offset;
     float angle;
+    float radius;
+
     void Start()
     {    
-        centre = chainSaw.transform.position;
-        radius = Vector2.Distance(transform.position, chainSaw.transform.position);
+        center = chainSaw.transform.position;
     }
     void Update()
     {
-        RotatePlayer();
+        // If not jumping
+        //FallOnGround();
+        /////////////////
+        if (Input.GetMouseButton(0))
+        {
+            RotatePlayer();
+        }
     }
     // Rotates player clock-wise
     void RotatePlayer()
     {
-        if (Input.GetMouseButton(0))
-        {
-            transform.RotateAround(centre, Vector3.back, rotateSpeed * Time.deltaTime);
-            /*
-            radius = Vector2.Distance(transform.position, chainSaw.transform.position);
-            angle += rotateSpeed * Time.deltaTime;
-            var offset = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)) * radius;
-            transform.position = centre + offset;
-            */
-        }
+        // Hem rotate et (LookAt kullan) hem de move et     
+        radius = Vector2.Distance(transform.position, chainSaw.transform.position);
+        angle += rotateSpeed * Time.deltaTime; // Güncellenecek
+        offset = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)) * radius;
+        transform.position = center + offset;
+    }
+    void FallOnGround()
+    {
+        float speed = fallSpeed * Time.deltaTime; 
+        transform.position = Vector2.MoveTowards(transform.position, center, speed);
     }
 }
