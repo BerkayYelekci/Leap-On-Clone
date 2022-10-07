@@ -22,26 +22,19 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         RotatePlayer();
-        FallOnTheGround();
-    }
-    // Pulls the ball to the center of the scene
-    void FallOnTheGround()
-    {
-        if (!isJumping.value)
-        {
-            float speed = fallSpeed * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, centre, speed);
-        }
     }
     // Rotates player clock-wise
     void RotatePlayer()
     {
         if (Input.GetMouseButton(0))
         {
+            transform.RotateAround(centre, Vector3.back, rotateSpeed * Time.deltaTime);
+            /*
             radius = Vector2.Distance(transform.position, chainSaw.transform.position);
             angle += rotateSpeed * Time.deltaTime;
             var offset = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)) * radius;
             transform.position = centre + offset;
+            */
         }
     }
 }

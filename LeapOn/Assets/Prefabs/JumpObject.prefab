@@ -115,5 +115,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isJumping: {fileID: 11400000, guid: 8a9f020b72c6c054298ebffeca723cfd, type: 2}
-  player: {fileID: 0}
-  jumpForce: 2
+  jumpForce: 150
