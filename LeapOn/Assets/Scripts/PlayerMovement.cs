@@ -1,15 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static Action gainScore; 
+
     public ScriptableBool isJumping;
 
     public float rotateSpeed; 
     public float fallSpeed;
     public float jumpSpeed;
-
     float jumpTime;
 
     public GameObject chainSaw;
@@ -20,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        jumpTime = .4f;
+        jumpTime = .5f;
         center = chainSaw.transform.position;
     }
     void Update()
@@ -79,8 +81,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("White"))
         {
+            gainScore?.Invoke();
             isJumping.value = true;
-            jumpTime = .4f;
+            jumpTime = .5f;
         }
     }
 }
