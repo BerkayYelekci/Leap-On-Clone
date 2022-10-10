@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class DestroyPlayer : MonoBehaviour
 {
+    public AudioSource failAS;
+    public AudioClip failAC;
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             // Destroys player 
             // GAME OVER
-            Destroy(collision.gameObject);
+            if (failAS != null)
+            {
+                failAS.PlayOneShot(failAC);
+            }
+
+            Destroy(collision.gameObject,.25f);
             // Will add particle effects
         }
     }
