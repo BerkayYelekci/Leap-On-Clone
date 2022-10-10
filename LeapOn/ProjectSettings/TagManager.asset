@@ -6,6 +6,7 @@ TagManager:
   tags:
   - White
   - Black
+  - Multiplier
   layers:
   - Default
   - TransparentFX
