@@ -12,4 +12,6 @@ public class BackGround : MonoBehaviour
         GetComponent<MeshRenderer>().material.color = bgColor;
     }
 
+    //Add condition for phase change.
+
 }

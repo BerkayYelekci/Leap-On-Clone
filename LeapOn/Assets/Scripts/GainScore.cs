@@ -9,7 +9,7 @@ public class GainScore : MonoBehaviour
     private void Start()
     {
         score.value = 0;
-        // It will rise incremental when player exceeds the multiplier line
+        // It will increment when player passes the multiplier line
         incrementScore = 1;
     }
     private void OnEnable()

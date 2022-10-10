@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
 
     public ScriptableBool isJumping;
 
+    public AudioSource colAS;
+    public AudioClip colAC;
+
     public float rotateSpeed; 
     public float fallSpeed;
     public float jumpSpeed;
@@ -38,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
-        // If player touches to the screen, the ball will rotate wheter its jumping or not
+        // If player touches to the screen, the ball will rotate whether its jumping or not
         if (Input.GetMouseButton(0))
         {
             RotatePlayer();
@@ -68,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Jump()
     {
-        // 1 second jump time always being less and less until it reaches to 0
+        // 1 second jump time always lessens until it reaches to 0
         jumpTime -= Time.deltaTime;
         transform.Translate(Vector2.up * jumpSpeed * Time.deltaTime);
         if (jumpTime <= 0)
@@ -84,6 +87,11 @@ public class PlayerMovement : MonoBehaviour
             gainScore?.Invoke();
             isJumping.value = true;
             jumpTime = .5f;
+
+            if (colAS != null)
+            {
+                colAS.PlayOneShot(colAC);
+            }
         }
     }
 }

@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
+        // For game screen, may add for MainMenu version.
         myAS = GetComponent<AudioSource>();
         myAS.clip = music;
         myAS.loop = true;
