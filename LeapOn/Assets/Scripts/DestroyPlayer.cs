@@ -19,7 +19,7 @@ public class DestroyPlayer : MonoBehaviour
                 failAS.PlayOneShot(failAC);
             }
 
-            Destroy(collision.gameObject,.25f);
+            Destroy(collision.gameObject);
             // Will add particle effects
         }
     }
