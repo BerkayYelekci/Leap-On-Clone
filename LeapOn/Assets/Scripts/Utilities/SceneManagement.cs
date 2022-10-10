@@ -23,4 +23,9 @@ public class SceneManagement : MonoBehaviour
         mainMenu.DOLocalMove(Vector2.zero, 1f);
     }
 
+    public void ReplayGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+
 }
