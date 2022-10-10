@@ -9,6 +9,7 @@ public class DestroyPlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Destroys player 
+            // GAME OVER
             Destroy(collision.gameObject);
             // Will add particle effects
         }

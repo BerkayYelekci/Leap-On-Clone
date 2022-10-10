@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 406401229}
   m_Layer: 0
   m_Name: Center
-  m_TagString: Enemy
+  m_TagString: Black
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1282,8 +1282,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isJumping: {fileID: 11400000, guid: 8a9f020b72c6c054298ebffeca723cfd, type: 2}
-  rotateSpeed: 3
-  fallSpeed: 1
+  rotateSpeed: 1
+  fallSpeed: 3
+  jumpSpeed: 3.5
   chainSaw: {fileID: 406401225}
 --- !u!58 &1838693809
 CircleCollider2D:
