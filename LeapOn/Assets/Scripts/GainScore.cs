@@ -14,11 +14,11 @@ public class GainScore : MonoBehaviour
     }
     private void OnEnable()
     {
-      //  PlayerMovement.gainScore += Gain;
+        PlayerMovement.gainScore += Gain;
     }
     private void OnDisable()
     {
-     //  PlayerMovement.gainScore -= Gain;
+       PlayerMovement.gainScore -= Gain;
     }
     void Gain()
     {
