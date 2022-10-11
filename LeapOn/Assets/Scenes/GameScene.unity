@@ -1966,6 +1966,7 @@ GameObject:
   - component: {fileID: 1838693810}
   - component: {fileID: 1838693812}
   - component: {fileID: 1838693813}
+  - component: {fileID: 1838693814}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2079,6 +2080,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   isJumping: {fileID: 11400000, guid: 8a9f020b72c6c054298ebffeca723cfd, type: 2}
+  playerScale: {fileID: 1838693807}
   colAS: {fileID: 1838693812}
   colAC: {fileID: 8300000, guid: 11d45d742f65ed7448ed85aad1f39165, type: 3}
   rotateSpeed: 1
@@ -2330,6 +2332,20 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &1838693814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838693805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a910a8c67f2dc4ba00395f7e91c872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDuration: 0.25
+  shakeIntensity: 0.1
 --- !u!1001 &1930298353
 PrefabInstance:
   m_ObjectHideFlags: 0
