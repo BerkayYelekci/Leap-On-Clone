@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField]
+    AnimationCurve fallCurve;
+
     public static Action gainScore; 
 
     public ScriptableBool isJumping;
@@ -57,17 +60,17 @@ public class PlayerMovement : MonoBehaviour
     }
     // Rotates player clock-wise
     void RotatePlayer()
-    {
-        // Hem rotate et (LookAt kullan) hem de move et    
+    {   
         radius = Vector2.Distance(transform.position, chainSaw.transform.position);
-        angle += rotateSpeed * Time.deltaTime; // Güncellenecek
+        angle += rotateSpeed * Time.deltaTime;
         offset = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)) * radius;
         transform.position = center + offset;
     }
     void FallOnGround()
     {
-        float speed = fallSpeed * Time.deltaTime; 
-        transform.position = Vector2.MoveTowards(transform.position, center, speed);
+        float speed = fallSpeed * Time.deltaTime;
+        //transform.position = Vector2.MoveTowards(transform.position, center, speed);
+        transform.position = Vector3.Lerp(transform.position, center, fallCurve.Evaluate(speed));
     }
     void Jump()
     {
@@ -75,6 +78,10 @@ public class PlayerMovement : MonoBehaviour
         jumpTime -= Time.deltaTime;
         transform.Translate(Vector2.up * jumpSpeed * Time.deltaTime);
         if (jumpTime <= 0)
+        {
+
+        }
+        if (jumpTime <= -.5f)
         {
             isJumping.value = false;
         }

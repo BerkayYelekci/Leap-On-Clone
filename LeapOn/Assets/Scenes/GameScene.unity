@@ -2054,11 +2054,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443039aac570c004c9f72e71ec2c552b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fallCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   isJumping: {fileID: 11400000, guid: 8a9f020b72c6c054298ebffeca723cfd, type: 2}
   colAS: {fileID: 1838693812}
   colAC: {fileID: 8300000, guid: 11d45d742f65ed7448ed85aad1f39165, type: 3}
   rotateSpeed: 1
-  fallSpeed: 3
+  fallSpeed: 2
   jumpSpeed: 3.5
   chainSaw: {fileID: 406401225}
 --- !u!58 &1838693809
