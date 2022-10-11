@@ -10,11 +10,10 @@ public class PlayerMovement : MonoBehaviour
     float realisticFallTime;
     Vector3 velocity = Vector3.zero;
 
-    public static Action gainScore; 
+    public static Action gainScore;
+    public static Action onTouchWhite;
 
     public ScriptableBool isJumping;
-
-    CameraShake camShake;
 
     public Transform playerScale;
 
@@ -34,8 +33,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        camShake = GetComponent<CameraShake>();
-
         realisticFallTime = .4f;
         jumpTime = .5f;
         center = chainSaw.transform.position;
@@ -112,28 +109,21 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("White"))
         {
+            onTouchWhite?.Invoke();
             gainScore?.Invoke();
             isJumping.value = true;
             jumpTime = .5f;
             jumpSpeed = 3f;
-            EffectSequence();
+
+            if (colAS != null)
+            {
+                colAS.PlayOneShot(colAC);
+            }
+            // Bounce Effect
+            playerScale.DOScale(new Vector3(.1f, .60f), 0.1f).OnComplete(() =>
+            {
+                transform.DOScale(new Vector3(.30f, 0.30f), 0.15f);
+            });
         }
     }
-
-    private void EffectSequence()
-    {
-        playerScale.DOScale(new Vector3(.1f, .60f), 0.1f).OnComplete(() =>
-        {
-            transform.DOScale(new Vector3(.30f, 0.30f), 0.15f);
-        });
-
-
-        camShake.ShakingSequence(); // may change where to call this function.
-
-        if (colAS != null)
-        {
-            colAS.PlayOneShot(colAC);
-        }
-    }
-
 }

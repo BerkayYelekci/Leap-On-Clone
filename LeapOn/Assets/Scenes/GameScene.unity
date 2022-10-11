@@ -1966,11 +1966,11 @@ GameObject:
   - component: {fileID: 1838693806}
   - component: {fileID: 1838693808}
   - component: {fileID: 1838693811}
+  - component: {fileID: 1838693814}
   - component: {fileID: 1838693809}
   - component: {fileID: 1838693810}
   - component: {fileID: 1838693812}
   - component: {fileID: 1838693813}
-  - component: {fileID: 1838693814}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
