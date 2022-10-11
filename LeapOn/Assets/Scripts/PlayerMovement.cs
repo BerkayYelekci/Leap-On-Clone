@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class PlayerMovement : MonoBehaviour
     public static Action gainScore; 
 
     public ScriptableBool isJumping;
+
+    CameraShake camShake;
+
+    public Transform playerScale;
 
     public AudioSource colAS;
     public AudioClip colAC;
@@ -28,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        camShake = GetComponent<CameraShake>();
+
         jumpTime = .5f;
         center = chainSaw.transform.position;
     }
@@ -95,11 +102,24 @@ public class PlayerMovement : MonoBehaviour
             gainScore?.Invoke();
             isJumping.value = true;
             jumpTime = .5f;
-
-            if (colAS != null)
-            {
-                colAS.PlayOneShot(colAC);
-            }
+            EffectSequence();
         }
     }
+
+    private void EffectSequence()
+    {
+        playerScale.DOScale(new Vector3(.1f, .60f), 0.1f).OnComplete(() =>
+        {
+            transform.DOScale(new Vector3(.30f, 0.30f), 0.15f);
+        });
+
+
+        camShake.ShakingSequence(); // may change where to call this function.
+
+        if (colAS != null)
+        {
+            colAS.PlayOneShot(colAC);
+        }
+    }
+
 }
