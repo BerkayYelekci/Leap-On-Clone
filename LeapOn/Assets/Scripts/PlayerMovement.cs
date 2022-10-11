@@ -115,6 +115,7 @@ public class PlayerMovement : MonoBehaviour
             gainScore?.Invoke();
             isJumping.value = true;
             jumpTime = .5f;
+            jumpSpeed = 3f;
             EffectSequence();
         }
     }
@@ -126,7 +127,6 @@ public class PlayerMovement : MonoBehaviour
             transform.DOScale(new Vector3(.30f, 0.30f), 0.15f);
         });
 
-            jumpSpeed = 3f;
 
         camShake.ShakingSequence(); // may change where to call this function.
 
