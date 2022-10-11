@@ -16,7 +16,7 @@ public class CameraAngle : MonoBehaviour
     }
     void ArrangeCameraDistance()
     {
-        
+        mainCam.DOOrthoSize(midDistanceForCamera.value.magnitude * 3f, 2.5f);
     }
     void FocusOnTheMid()
     {
