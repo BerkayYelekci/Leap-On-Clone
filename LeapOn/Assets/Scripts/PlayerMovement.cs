@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public static Action onTouchWhite;
 
     public ScriptableBool isJumping;
+    public ScriptableInt distanceToCenter;
 
     public Transform playerScale;
 
@@ -114,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
             isJumping.value = true;
             jumpTime = .5f;
             jumpSpeed = 3f;
-
+            // Hit sound plays
             if (colAS != null)
             {
                 colAS.PlayOneShot(colAC);
