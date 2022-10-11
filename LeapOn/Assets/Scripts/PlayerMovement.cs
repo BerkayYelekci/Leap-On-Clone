@@ -6,8 +6,9 @@ using DG.Tweening;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]
-    AnimationCurve fallCurve;
+    public float fallTime; // 1
+    float realisticFallTime;
+    Vector3 velocity = Vector3.zero;
 
     public static Action gainScore; 
 
@@ -21,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip colAC;
 
     public float rotateSpeed; 
-    public float fallSpeed;
+    float fallSpeed;
     public float jumpSpeed;
     float jumpTime;
 
@@ -35,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
         camShake = GetComponent<CameraShake>();
 
+        realisticFallTime = .4f;
         jumpTime = .5f;
         center = chainSaw.transform.position;
     }
@@ -75,19 +77,30 @@ public class PlayerMovement : MonoBehaviour
     }
     void FallOnGround()
     {
-        float speed = fallSpeed * Time.deltaTime;
+        //float speed = fallSpeed * Time.deltaTime;
         //transform.position = Vector2.MoveTowards(transform.position, center, speed);
-        transform.position = Vector3.Lerp(transform.position, center, fallCurve.Evaluate(speed));
+        transform.position = Vector3.SmoothDamp(transform.position, center, ref velocity, fallTime);
+        fallTime -= Time.deltaTime;
     }
     void Jump()
     {
+        // These are for fall ground function
+        fallTime = 1;
+        velocity = Vector3.zero;
+        /////////////////////////////////////
+        
+        transform.Translate(Vector2.up * jumpSpeed * Time.deltaTime);
+        jumpSpeed -= Time.deltaTime;
+        //transform.position = Vector3.SmoothDamp(transform.position, Vector2.up, ref velocity, 5);
+
         // 1 second jump time always lessens until it reaches to 0
         jumpTime -= Time.deltaTime;
-        transform.Translate(Vector2.up * jumpSpeed * Time.deltaTime);
+        // For more realistic start to falling
         if (jumpTime <= 0)
         {
-
+            transform.position = Vector3.SmoothDamp(transform.position, Vector2.up, ref velocity, realisticFallTime);
         }
+        ///////////////////////////////////////
         if (jumpTime <= -.5f)
         {
             isJumping.value = false;
@@ -113,6 +126,7 @@ public class PlayerMovement : MonoBehaviour
             transform.DOScale(new Vector3(.30f, 0.30f), 0.15f);
         });
 
+            jumpSpeed = 3f;
 
         camShake.ShakingSequence(); // may change where to call this function.
 

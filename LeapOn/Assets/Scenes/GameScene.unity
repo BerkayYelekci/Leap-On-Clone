@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlackAndWhite (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8404062655721370613, guid: 3e837f173a492ae448332127b7aaa311, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e837f173a492ae448332127b7aaa311, type: 3}
 --- !u!4 &218592236 stripped
@@ -2034,7 +2038,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838693805}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.5, z: 0}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2055,37 +2059,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443039aac570c004c9f72e71ec2c552b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  fallTime: 1
   isJumping: {fileID: 11400000, guid: 8a9f020b72c6c054298ebffeca723cfd, type: 2}
   playerScale: {fileID: 1838693807}
   colAS: {fileID: 1838693812}
   colAC: {fileID: 8300000, guid: 11d45d742f65ed7448ed85aad1f39165, type: 3}
   rotateSpeed: 1
-  fallSpeed: 2
-  jumpSpeed: 3.5
+  jumpSpeed: 3
   chainSaw: {fileID: 406401225}
 --- !u!58 &1838693809
 CircleCollider2D:
