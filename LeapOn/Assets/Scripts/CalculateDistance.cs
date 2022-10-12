@@ -7,6 +7,7 @@ public class CalculateDistance : MonoBehaviour
     public Transform center, player;
     public ScriptableInt distanceToCenter;
     public ScriptableVector3 midDistanceForCamera;
+    public ScriptableBool isGameOver;
     void Start()
     {
         // Distance to center at start position
@@ -14,7 +15,10 @@ public class CalculateDistance : MonoBehaviour
     }
     void Update()
     {
-        DistanceCalculator();
+        if (!isGameOver.value)
+        {
+            DistanceCalculator();
+        }
     }
     void DistanceCalculator()
     {
