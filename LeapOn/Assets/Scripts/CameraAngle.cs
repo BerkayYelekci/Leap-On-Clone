@@ -10,16 +10,12 @@ public class CameraAngle : MonoBehaviour
     public ScriptableVector3 midDistanceForCamera;
     float cameraAngleGameOver;
     public Camera mainCam;
-    private void Start()
-    {
-        
-    }
     private void Update()
     {
         if (!isGameOver.value)
         {
-            FocusOnTheMid();
             ArrangeCameraDistance();
+            FocusOnTheMid();
         }
         else
         {

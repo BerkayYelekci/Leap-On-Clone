@@ -1922,6 +1922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1465682350228c44ca092de5d88e002b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraShaking: {fileID: 11400000, guid: 814167aa6e483be49ad90fab0e9b44f6, type: 2}
   isGameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
   distanceToCenter: {fileID: 11400000, guid: c92926bffab5fdd4a90d676d4cdebdfc, type: 2}
   midDistanceForCamera: {fileID: 11400000, guid: 600ef65222fa1704fb61d82e9235b3bc, type: 2}
@@ -2456,8 +2457,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a910a8c67f2dc4ba00395f7e91c872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeDuration: 0.25
-  shakeIntensity: 0.1
+  cameraShaking: {fileID: 11400000, guid: 814167aa6e483be49ad90fab0e9b44f6, type: 2}
+  shakeDuration: 1
+  shakeIntensity: 1.25
 --- !u!96 &1838693815
 TrailRenderer:
   serializedVersion: 2

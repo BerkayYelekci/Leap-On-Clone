@@ -7,8 +7,6 @@ public class CameraShake : MonoBehaviour
     public float shakeDuration;
     public float shakeIntensity;
     CameraShake camShake;
-
-
     private void Start()
     {
         camShake = GetComponent<CameraShake>();
@@ -21,16 +19,12 @@ public class CameraShake : MonoBehaviour
     {
         PlayerMovement.onTouchWhite -= EffectSequence;
     }
-
     private void EffectSequence()
     {
         camShake.ShakingSequence(); // may change where to call this function.
     }
-
     public void ShakingSequence()
     {
-        Camera.main.DOShakePosition(shakeDuration, shakeIntensity, fadeOut: true);
-    }
-
-    
+        Camera.main.DOShakeRotation(shakeDuration, shakeIntensity, fadeOut: true);
+    } 
 }
