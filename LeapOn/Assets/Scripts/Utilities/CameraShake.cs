@@ -8,7 +8,6 @@ public class CameraShake : MonoBehaviour
     public float shakeIntensity;
     CameraShake camShake;
 
-    public ParticleSystem impactParticles;
 
     private void Start()
     {
@@ -26,7 +25,6 @@ public class CameraShake : MonoBehaviour
     private void EffectSequence()
     {
         camShake.ShakingSequence(); // may change where to call this function.
-        ParticleOnImpact();
     }
 
     public void ShakingSequence()
@@ -34,8 +32,5 @@ public class CameraShake : MonoBehaviour
         Camera.main.DOShakePosition(shakeDuration, shakeIntensity, fadeOut: true);
     }
 
-    private void ParticleOnImpact()
-    {
-        impactParticles.Play();
-    }
+    
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DestroyWhites : MonoBehaviour
 {
+    [SerializeField] GameObject impactParticles;
+
     // Destroy itself when collides with the player.
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -12,6 +14,15 @@ public class DestroyWhites : MonoBehaviour
             // There will be particle effects when destroy itself here
             //////////////////////////////////////////////////////////
             Destroy(this.gameObject);
+
+            ImpactEffect();
         } 
+    }
+
+    private void ImpactEffect()
+    {
+        GameObject explosion = Instantiate(impactParticles, transform.position, Quaternion.identity);
+        explosion.GetComponent<ParticleSystem>().Play();
+        Destroy(explosion,.1f);
     }
 }
