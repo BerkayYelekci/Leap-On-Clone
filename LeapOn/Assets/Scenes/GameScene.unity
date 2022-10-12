@@ -1922,6 +1922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1465682350228c44ca092de5d88e002b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
   distanceToCenter: {fileID: 11400000, guid: c92926bffab5fdd4a90d676d4cdebdfc, type: 2}
   midDistanceForCamera: {fileID: 11400000, guid: 600ef65222fa1704fb61d82e9235b3bc, type: 2}
   mainCam: {fileID: 519420031}
@@ -1941,6 +1942,7 @@ MonoBehaviour:
   player: {fileID: 1838693807}
   distanceToCenter: {fileID: 11400000, guid: c92926bffab5fdd4a90d676d4cdebdfc, type: 2}
   midDistanceForCamera: {fileID: 11400000, guid: 600ef65222fa1704fb61d82e9235b3bc, type: 2}
+  isGameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
 --- !u!4 &1765201356 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2135220302027190667, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
@@ -2188,6 +2190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallTime: 1
+  isGameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
   isJumping: {fileID: 11400000, guid: 8a9f020b72c6c054298ebffeca723cfd, type: 2}
   distanceToCenter: {fileID: 11400000, guid: c92926bffab5fdd4a90d676d4cdebdfc, type: 2}
   playerScale: {fileID: 1838693807}

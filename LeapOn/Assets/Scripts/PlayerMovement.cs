@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public static Action gainScore;
     public static Action onTouchWhite;
 
+    public ScriptableBool isGameOver;
     public ScriptableBool isJumping;
     public ScriptableInt distanceToCenter;
 
@@ -40,23 +41,26 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        // The ball always looks at the center
-        LookCenter();
-        // If not jumping
-        if (!isJumping.value)
+        if (!isGameOver.value)
         {
-            FallOnGround();
+            // The ball always looks at the center
+            LookCenter();
+            // If not jumping
+            if (!isJumping.value)
+            {
+                FallOnGround();
+            }
+            else
+            {
+                Jump();
+            }
+            // If player touches to the screen, the ball will rotate whether its jumping or not
+            if (Input.GetMouseButton(0))
+            {
+                RotatePlayer();
+            }
+            /////////////////
         }
-        else
-        {
-            Jump();
-        }
-        // If player touches to the screen, the ball will rotate whether its jumping or not
-        if (Input.GetMouseButton(0))
-        {
-            RotatePlayer();
-        }
-        /////////////////   
     }
     void LookCenter()
     {
