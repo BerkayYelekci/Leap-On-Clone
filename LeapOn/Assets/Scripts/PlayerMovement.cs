@@ -103,15 +103,12 @@ public class PlayerMovement : MonoBehaviour
     }
     void FallOnGround()
     {
-        //float speed = fallSpeed * Time.deltaTime;
-        //transform.position = Vector2.MoveTowards(transform.position, center, speed);
         transform.position = Vector3.SmoothDamp(transform.position, center, ref velocity, fallTime);
         fallTime -= Time.deltaTime;
     }
     void Jump()
     {
-        // These are for fall ground function
-        fallTime = 1;
+        // This is for fall ground function
         velocity = Vector3.zero;
         /////////////////////////////////////
         
@@ -125,6 +122,8 @@ public class PlayerMovement : MonoBehaviour
         if (jumpTime <= 0)
         {
             transform.position = Vector3.SmoothDamp(transform.position, Vector2.up, ref velocity, realisticFallTime);
+            // Fall speed with respect to max distance to center
+            SetFallTime();
         }
         ///////////////////////////////////////
         if (jumpTime <= -.5f)
@@ -132,6 +131,26 @@ public class PlayerMovement : MonoBehaviour
             isJumping.value = false;
         }
         // Jump mechanic
+    }
+    // Arranges the fall time with respect to its distance to the center
+    void SetFallTime()
+    {
+        if (distanceToCenter.value <= 3)
+        {
+            fallTime = 1.1f;
+        }
+        else if (distanceToCenter.value > 3 && distanceToCenter.value <= 5)
+        {
+            fallTime = 1.25f;
+        }
+        else if (distanceToCenter.value > 5 && distanceToCenter.value <= 7)
+        {
+            fallTime = 1.5f;
+        }
+        else if (distanceToCenter.value > 7 && distanceToCenter.value <= 9)
+        {
+            fallTime = 2f;
+        }
     }
     // Gain score 
     private void OnCollisionEnter2D(Collision2D collision)
