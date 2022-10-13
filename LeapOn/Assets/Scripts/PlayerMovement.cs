@@ -96,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isRelease = true;
         radius = Vector2.Distance(transform.position, chainSaw.transform.position);
-        angle += rotateSpeed * Time.deltaTime;
+        angle += (rotateSpeed / 2) * Time.deltaTime;
         offset = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)) * radius;
         transform.position = center + offset;
         releaseTime -= Time.deltaTime;
