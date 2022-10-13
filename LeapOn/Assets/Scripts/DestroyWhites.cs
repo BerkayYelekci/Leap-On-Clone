@@ -13,7 +13,7 @@ public class DestroyWhites : MonoBehaviour
         {
             // There will be particle effects when destroy itself here
             //////////////////////////////////////////////////////////
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
 
             ImpactEffect();
         } 
