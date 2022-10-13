@@ -8,7 +8,7 @@ public class BackGround : MonoBehaviour
 
     private void Start()
     {
-        bgColor = Random.ColorHSV(.5f, 1,0.5f,0.5f);
+        bgColor = Random.ColorHSV(.5f, 1f,0.8f,0.8f,0.75f,1);
         GetComponent<MeshRenderer>().material.color = bgColor;
     }
 
