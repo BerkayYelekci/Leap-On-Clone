@@ -21,7 +21,7 @@ public class DestroyPlayer : MonoBehaviour
             {
                 failAS.PlayOneShot(failAC);
             }
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
     }
 }

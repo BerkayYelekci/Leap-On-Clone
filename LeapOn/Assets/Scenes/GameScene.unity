@@ -1946,6 +1946,7 @@ GameObject:
   - component: {fileID: 1726171445}
   - component: {fileID: 1726171446}
   - component: {fileID: 1726171447}
+  - component: {fileID: 1726171448}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2030,6 +2031,22 @@ MonoBehaviour:
   distanceToCenter: {fileID: 11400000, guid: c92926bffab5fdd4a90d676d4cdebdfc, type: 2}
   midDistanceForCamera: {fileID: 11400000, guid: 600ef65222fa1704fb61d82e9235b3bc, type: 2}
   isGameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
+--- !u!114 &1726171448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726171442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c5cbc816cab8d438f81fc75b1767cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentObject: {fileID: 245639800}
+  pooledObjects: []
+  objectToPool: {fileID: 2135220302027190669, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
+  amountToPool: 10
 --- !u!4 &1765201356 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2135220302027190667, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
