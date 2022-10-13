@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     float fallSpeed;
     public float jumpSpeed;
     float jumpTime;
+    float releaseTime;
+    bool isRelease;
 
     public GameObject chainSaw;
     Vector2 center;
@@ -35,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        isRelease = false;
+        releaseTime = .15f;
         realisticFallTime = .4f;
         jumpTime = .5f;
         center = chainSaw.transform.position;
@@ -59,6 +63,15 @@ public class PlayerMovement : MonoBehaviour
             {
                 RotatePlayer();
             }
+            if (Input.GetMouseButtonUp(0))
+            {
+                releaseTime = .15f;
+                isRelease = true;
+            }
+            if (isRelease && releaseTime >= 0)
+            {
+                RotatePlayerOnMouseUp();
+            }
             /////////////////
         }
     }
@@ -72,10 +85,21 @@ public class PlayerMovement : MonoBehaviour
     // Rotates player clock-wise
     void RotatePlayer()
     {   
+        isRelease = false;
         radius = Vector2.Distance(transform.position, chainSaw.transform.position);
         angle += rotateSpeed * Time.deltaTime;
         offset = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)) * radius;
         transform.position = center + offset;
+    }
+    // Rotates player a little when player quits touching the screen
+    void RotatePlayerOnMouseUp()
+    {
+        isRelease = true;
+        radius = Vector2.Distance(transform.position, chainSaw.transform.position);
+        angle += rotateSpeed * Time.deltaTime;
+        offset = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)) * radius;
+        transform.position = center + offset;
+        releaseTime -= Time.deltaTime;
     }
     void FallOnGround()
     {
