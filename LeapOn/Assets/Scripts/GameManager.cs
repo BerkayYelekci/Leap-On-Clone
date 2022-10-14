@@ -22,5 +22,6 @@ public class GameManager : MonoBehaviour
     void GameOver()
     {
         gameOver.value = true;
+        PlayerPrefs.Save();
     }
 }
