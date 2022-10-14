@@ -609,6 +609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   failAS: {fileID: 406401230}
   failAC: {fileID: 8300000, guid: 77078bd29b6c2074b9cd9c58c9cc524c, type: 3}
+  otherCollider: {fileID: 406401228}
 --- !u!82 &406401230
 AudioSource:
   m_ObjectHideFlags: 0

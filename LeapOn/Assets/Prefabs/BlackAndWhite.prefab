@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impactParticles: {fileID: 4186397633849351563, guid: 97aa51d5424b2494eb9242a4c32d287e, type: 3}
+  otherCollider: {fileID: 8404062654698068928}
 --- !u!1 &8404062654698068956
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,6 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   failAS: {fileID: 8802957987288762892}
   failAC: {fileID: 8300000, guid: 77078bd29b6c2074b9cd9c58c9cc524c, type: 3}
+  otherCollider: {fileID: 8404062653978504762}
 --- !u!82 &8802957987288762892
 AudioSource:
   m_ObjectHideFlags: 0
