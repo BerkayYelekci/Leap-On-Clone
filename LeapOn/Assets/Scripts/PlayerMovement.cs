@@ -101,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
         transform.position = center + offset;
         releaseTime -= Time.deltaTime;
     }
+    // Player falls on the center
     void FallOnGround()
     {
         transform.position = Vector3.SmoothDamp(transform.position, center, ref velocity, fallTime);
