@@ -4,12 +4,16 @@ using UnityEngine;
 using TMPro;
 public class GainScore : MonoBehaviour
 {
-    public ScriptableInt score;
+    public ScriptableInt score, highScore;
     public ScriptableInt scoreMultiplier;
     int incrementScore;
 
     public TMP_Text scoreText;
 
+    private void Awake()
+    {
+        highScore.value = PlayerPrefs.GetInt("highScore");
+    }
     private void Start()
     {
         score.value = 0;
@@ -33,6 +37,7 @@ public class GainScore : MonoBehaviour
         if (score.value > PlayerPrefs.GetInt("highScore"))
         {
             PlayerPrefs.SetInt("highScore", score.value);
+            highScore.value = score.value;
         }
     }
     void Multiplier()
