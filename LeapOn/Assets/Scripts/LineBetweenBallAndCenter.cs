@@ -18,5 +18,6 @@ public class LineBetweenBallAndCenter : MonoBehaviour
     {
         lineRenderer.SetPosition(0, center.position);
         lineRenderer.SetPosition(1, transform.position);
+        lineRenderer.sortingOrder = 15;
     }
 }
