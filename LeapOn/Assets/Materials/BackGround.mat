@@ -80,8 +80,8 @@ Material:
     m_Floats:
     - _AlphaClip: 0
     - _Blend: 0
-    - _BottomOrigin: -4
-    - _BottomSpread: 0.3
+    - _BottomOrigin: -8
+    - _BottomSpread: 0.4
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
@@ -106,18 +106,18 @@ Material:
     - _Spread: 0.4
     - _SrcBlend: 1
     - _Surface: 0
-    - _TopOrigin: 2
-    - _TopSpread: 0.3
+    - _TopOrigin: 8
+    - _TopSpread: 0.4
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FirstColor: {r: 0.19820292, g: 0.3962264, b: 0.042613003, a: 1}
-    - _SecondColor: {r: 0.33384165, g: 0.7176471, b: 0.03137254, a: 1}
+    - _FirstColor: {r: 0, g: 0.44034088, b: 0.5, a: 1}
+    - _SecondColor: {r: 0, g: 0.39630678, b: 0.45, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _ThirdColor: {r: 0.2913365, g: 0.9056604, b: 0.020505492, a: 1}
+    - _ThirdColor: {r: 0, g: 0.35227272, b: 0.4, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &4746095529409214437
 MonoBehaviour:
