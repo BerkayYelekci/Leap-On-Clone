@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 406401231}
   m_Layer: 0
   m_Name: Center
-  m_TagString: Black
+  m_TagString: Center
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -695,6 +695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a811cde149b2e41b19e131acb2c563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyPlayer: {fileID: 11400000, guid: f2ee6e5e47d7f13489883ba8a6151111, type: 2}
   otherCollider: {fileID: 406401228}
 --- !u!82 &406401230
 AudioSource:
@@ -2190,6 +2191,7 @@ MonoBehaviour:
   jumpSpeed: {fileID: 11400000, guid: 70b5c39f5f51cb74ca923a13173cfded, type: 2}
   jumpPU: {fileID: 11400000, guid: c1f59658c8e5afb498ec91c59eacb983, type: 2}
   rotatePU: {fileID: 11400000, guid: 98c6ee1c348c2974688f5ad6526003fe, type: 2}
+  destroyBlackPU: {fileID: 11400000, guid: f2ee6e5e47d7f13489883ba8a6151111, type: 2}
 --- !u!4 &1333440702
 Transform:
   m_ObjectHideFlags: 0
@@ -3064,6 +3066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isJumping: {fileID: 11400000, guid: 8a9f020b72c6c054298ebffeca723cfd, type: 2}
+  destroyPlayer: {fileID: 11400000, guid: f2ee6e5e47d7f13489883ba8a6151111, type: 2}
   gameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
   rotateSpeed: {fileID: 11400000, guid: 69385b75659a82a4cab70a3fc91b3b94, type: 2}
   jumpSpeed: {fileID: 11400000, guid: 70b5c39f5f51cb74ca923a13173cfded, type: 2}

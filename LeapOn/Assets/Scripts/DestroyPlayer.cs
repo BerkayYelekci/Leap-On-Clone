@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DestroyPlayer : MonoBehaviour
 {
+    public ScriptableBool destroyPlayer;
     public static Action gameOver;
     
     public Collider2D otherCollider;
@@ -13,12 +14,24 @@ public class DestroyPlayer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            otherCollider.enabled = false;
-            // GAME OVER
-            gameOver?.Invoke();
-            // Destroys player 
-            collision.gameObject.SetActive(false);
-            ////////////
+            if (destroyPlayer.value)
+            {
+                otherCollider.enabled = false;
+                // GAME OVER
+                gameOver?.Invoke();
+                // Destroys player 
+                collision.gameObject.SetActive(false);
+                ////////////
+            }
+            else if(gameObject.CompareTag("Center") && !destroyPlayer.value)
+            {
+                gameOver?.Invoke();
+                collision.gameObject.SetActive(false);
+            }   
+            else if (!gameObject.CompareTag("Center") && !destroyPlayer.value)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 
