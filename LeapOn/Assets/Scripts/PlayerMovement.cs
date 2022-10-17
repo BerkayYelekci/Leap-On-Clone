@@ -14,15 +14,14 @@ public class PlayerMovement : MonoBehaviour
     public static Action onTouchWhite;
     public static Action collisionSound;
 
-    public ScriptableBool isGameOver;
+    public ScriptableBool isGameOver, jumpPU;
     public ScriptableBool isJumping;
     public ScriptableInt distanceToCenter;
-    public ScriptableFloat rotateSpeed;
+    public ScriptableFloat rotateSpeed, jumpSpeed;
 
     public Transform playerScale;
 
     float fallSpeed;
-    public float jumpSpeed;
     float jumpTime;
     float releaseTime;
     bool isRelease;
@@ -111,8 +110,8 @@ public class PlayerMovement : MonoBehaviour
         velocity = Vector3.zero;
         /////////////////////////////////////
         
-        transform.Translate(Vector2.up * jumpSpeed * Time.deltaTime);
-        jumpSpeed -= Time.deltaTime;
+        transform.Translate(Vector2.up * jumpSpeed.value * Time.deltaTime);
+        jumpSpeed.value -= Time.deltaTime;
         //transform.position = Vector3.SmoothDamp(transform.position, Vector2.up, ref velocity, 5);
 
         // 1 second jump time always lessens until it reaches to 0
@@ -161,9 +160,16 @@ public class PlayerMovement : MonoBehaviour
             collisionSound?.Invoke();
             isJumping.value = true;
             jumpTime = .5f;
-            jumpSpeed = 3f;
-            // Hit sound plays
-           
+            // Reset jump value wheter the power up has taken or not
+            if (jumpPU.value) 
+            {
+                jumpSpeed.value = 5f;
+            }
+            else
+            {
+                jumpSpeed.value = 3f;
+            }
+            /////////////////////////////////////////////////////////
             // Bounce Effect
             playerScale.DOScale(new Vector3(.1f, .60f), 0.1f).OnComplete(() =>
             {
