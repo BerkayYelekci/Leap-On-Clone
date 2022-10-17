@@ -201,7 +201,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
+  m_Color: {r: 0.6379265, g: 1, b: 0.63584906, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -261,7 +261,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpIcon: {fileID: 5059813206734522666}
   fastIcon: {fileID: 5059813207930697732}
-  rotateSpeed: {fileID: 11400000, guid: 69385b75659a82a4cab70a3fc91b3b94, type: 2}
 --- !u!1 &5059813206734522666
 GameObject:
   m_ObjectHideFlags: 0
