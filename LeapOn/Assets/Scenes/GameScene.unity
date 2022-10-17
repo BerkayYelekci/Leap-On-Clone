@@ -2865,7 +2865,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: -3
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0, g: 0.4778417, b: 0.54, a: 1}
   m_FlipX: 0
@@ -2911,6 +2911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f024925d8fdf7ca44859843eadd55cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverUI: {fileID: 1879095225}
 --- !u!4 &1797118925
 Transform:
   m_ObjectHideFlags: 0
@@ -3688,7 +3689,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: -2
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0, g: 0.44034088, b: 0.5, a: 1}
   m_FlipX: 0
@@ -3957,8 +3958,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1663964100098686406, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1797118924}
+    - target: {fileID: 1663964100098686406, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReplayGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663964100098686406, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameSceneManagement, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
+--- !u!1 &1879095225 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1663964098963027351, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
+  m_PrefabInstance: {fileID: 1879095224}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1904202961
 GameObject:
   m_ObjectHideFlags: 0
@@ -4297,7 +4315,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: -1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0, g: 0.3882353, b: 0.4392157, a: 1}
   m_FlipX: 0

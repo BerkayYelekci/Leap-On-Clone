@@ -8,7 +8,7 @@ public class ScoreDisplay : MonoBehaviour
 
     void Start()
     {
-        highScore.text = PlayerPrefs.GetInt("highScore").ToString();
+        highScore.text = "High Score:  "+ PlayerPrefs.GetInt("highScore").ToString();
     }
 
     // Update is called once per frame

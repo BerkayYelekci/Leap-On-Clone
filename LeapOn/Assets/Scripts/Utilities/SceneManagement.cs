@@ -6,7 +6,8 @@ using DG.Tweening;
 public class SceneManagement : MonoBehaviour
 {
     public RectTransform mainMenu;
-   
+ 
+
 
     private void Start()
     {
@@ -22,5 +23,7 @@ public class SceneManagement : MonoBehaviour
     {
         mainMenu.DOLocalMove(Vector2.zero, 1f);
     }
+
+    
 
 }
