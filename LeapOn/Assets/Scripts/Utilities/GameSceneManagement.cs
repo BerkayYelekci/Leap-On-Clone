@@ -20,12 +20,10 @@ public class GameSceneManagement : MonoBehaviour
     public void ReplayGame()
     {
         SceneManager.LoadScene(1);
-        Time.timeScale = 1;
     }
 
     public void GameOverUI()
     {
         gameOverUI.SetActive(true);
-        Time.timeScale = 0f;
     }
 }

@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 403820911}
   - component: {fileID: 403820910}
   - component: {fileID: 403820913}
-  - component: {fileID: 403820914}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -274,22 +273,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &403820914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403820908}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2753e4bc1d00945b7f255fb2eeacf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  button: {fileID: 403820909}
-  duration: 25
-  elasticity: 3.5
-  vibratio: 3
 --- !u!114 &436625776 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5120640803673271509, guid: 126dfec1f6c2d1944bb7c59400be6201, type: 3}
