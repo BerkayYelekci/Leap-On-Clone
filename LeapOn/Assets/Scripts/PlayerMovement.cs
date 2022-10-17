@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     public static Action gainScore;
     public static Action onTouchWhite;
+    public static Action collisionSound;
 
     public ScriptableBool isGameOver;
     public ScriptableBool isJumping;
@@ -19,9 +20,6 @@ public class PlayerMovement : MonoBehaviour
     public ScriptableFloat rotateSpeed;
 
     public Transform playerScale;
-
-    public AudioSource colAS;
-    public AudioClip colAC;
 
     float fallSpeed;
     public float jumpSpeed;
@@ -160,14 +158,12 @@ public class PlayerMovement : MonoBehaviour
         {
             onTouchWhite?.Invoke();
             gainScore?.Invoke();
+            collisionSound?.Invoke();
             isJumping.value = true;
             jumpTime = .5f;
             jumpSpeed = 3f;
             // Hit sound plays
-            if (colAS != null)
-            {
-                colAS.PlayOneShot(colAC);
-            }
+           
             // Bounce Effect
             playerScale.DOScale(new Vector3(.1f, .60f), 0.1f).OnComplete(() =>
             {

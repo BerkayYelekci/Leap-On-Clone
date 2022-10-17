@@ -5,10 +5,6 @@ using UnityEngine;
 
 public class DestroyPlayer : MonoBehaviour
 {
-    public AudioSource failAS;
-    
-    public AudioClip failAC;
-    
     public static Action gameOver;
     
     public Collider2D otherCollider;
@@ -23,10 +19,7 @@ public class DestroyPlayer : MonoBehaviour
             // GAME OVER
             gameOver?.Invoke();
             ////////////
-            if (failAS != null)
-            {
-                failAS.PlayOneShot(failAC);
-            }
+           
             collision.gameObject.SetActive(false);
         }
     }

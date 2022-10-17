@@ -696,7 +696,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   failAS: {fileID: 406401230}
-  failAC: {fileID: 8300000, guid: 77078bd29b6c2074b9cd9c58c9cc524c, type: 3}
   otherCollider: {fileID: 406401228}
 --- !u!82 &406401230
 AudioSource:
@@ -3005,7 +3004,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bcbd42770c88c40a5ce2074a8dcd95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 8300000, guid: d3b2aa66fdbb5a24d9297cd5a24a2157, type: 3}
+  gameMusic: {fileID: 8300000, guid: d3b2aa66fdbb5a24d9297cd5a24a2157, type: 3}
+  colAC: {fileID: 8300000, guid: 11d45d742f65ed7448ed85aad1f39165, type: 3}
+  failAC: {fileID: 8300000, guid: 77078bd29b6c2074b9cd9c58c9cc524c, type: 3}
 --- !u!4 &1720106943
 Transform:
   m_ObjectHideFlags: 0
@@ -3684,8 +3685,6 @@ MonoBehaviour:
   distanceToCenter: {fileID: 11400000, guid: c92926bffab5fdd4a90d676d4cdebdfc, type: 2}
   rotateSpeed: {fileID: 11400000, guid: 69385b75659a82a4cab70a3fc91b3b94, type: 2}
   playerScale: {fileID: 1838693807}
-  colAS: {fileID: 1838693812}
-  colAC: {fileID: 8300000, guid: 11d45d742f65ed7448ed85aad1f39165, type: 3}
   jumpSpeed: 3
   chainSaw: {fileID: 406401225}
 --- !u!58 &1838693809

@@ -6,7 +6,6 @@ public class GameSceneManagement : MonoBehaviour
 {
     public GameObject gameOverUI;
 
-
     private void OnEnable()
     {
         DestroyPlayer.gameOver += GameOverUI;
