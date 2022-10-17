@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,22 +6,20 @@ using UnityEngine;
 public class PowerUp : MonoBehaviour
 {
     int randomPowerUp;
-    float powerUpTime;
     bool jumpPU, rotatePU;
     public GameObject jumpIcon, fastIcon;
-    public ScriptableFloat rotateSpeed;
+    public static Action rotatePowerUpAction, jumpPowerUpAction;
     private void Awake()
     {
-        powerUpTime = 1.5f;
-        randomPowerUp = Random.Range(0, 2);
-        // Jump Higher
+        randomPowerUp = UnityEngine.Random.Range(0, 2);
+        // Jump Higher Object Active
         if (randomPowerUp == 0)
         {
             fastIcon.gameObject.SetActive(false);
             rotatePU = false;
             jumpPU = true;
         }
-        // RotateFaster
+        // Rotate Faster Object Active
         else if (randomPowerUp == 1)
         {
             jumpIcon.gameObject.SetActive(false);
@@ -28,27 +27,17 @@ public class PowerUp : MonoBehaviour
             rotatePU = true;
         }
     }
-    IEnumerator IncreaseRotateSpeed()
-    {
-        rotateSpeed.value = 2;
-        yield return new WaitForSeconds(powerUpTime);
-        gameObject.SetActive(false);
-        rotateSpeed.value = 1;
-    }
-    IEnumerator IncreaseJumpPower()
-    {
-        yield return new WaitForSeconds(powerUpTime);
-        gameObject.SetActive(false);
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player") && rotatePU)
         {
-            StartCoroutine(IncreaseRotateSpeed());
+            rotatePowerUpAction?.Invoke();
+            gameObject.SetActive(false);
         }
         else if (collision.gameObject.CompareTag("Player") && jumpPU)
         {
-            StartCoroutine(IncreaseJumpPower());
+            jumpPowerUpAction?.Invoke();
+            gameObject.SetActive(false);
         }
     }
 }

@@ -2187,6 +2187,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: {fileID: 11400000, guid: 69385b75659a82a4cab70a3fc91b3b94, type: 2}
+  jumpSpeed: {fileID: 11400000, guid: 70b5c39f5f51cb74ca923a13173cfded, type: 2}
+  jumpPU: {fileID: 11400000, guid: c1f59658c8e5afb498ec91c59eacb983, type: 2}
+  rotatePU: {fileID: 11400000, guid: 98c6ee1c348c2974688f5ad6526003fe, type: 2}
 --- !u!4 &1333440702
 Transform:
   m_ObjectHideFlags: 0
@@ -3063,6 +3066,7 @@ MonoBehaviour:
   isJumping: {fileID: 11400000, guid: 8a9f020b72c6c054298ebffeca723cfd, type: 2}
   gameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
   rotateSpeed: {fileID: 11400000, guid: 69385b75659a82a4cab70a3fc91b3b94, type: 2}
+  jumpSpeed: {fileID: 11400000, guid: 70b5c39f5f51cb74ca923a13173cfded, type: 2}
 --- !u!4 &1726171444
 Transform:
   m_ObjectHideFlags: 0
@@ -3590,11 +3594,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallTime: 1.1
   isGameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
+  jumpPU: {fileID: 11400000, guid: c1f59658c8e5afb498ec91c59eacb983, type: 2}
   isJumping: {fileID: 11400000, guid: 8a9f020b72c6c054298ebffeca723cfd, type: 2}
   distanceToCenter: {fileID: 11400000, guid: c92926bffab5fdd4a90d676d4cdebdfc, type: 2}
   rotateSpeed: {fileID: 11400000, guid: 69385b75659a82a4cab70a3fc91b3b94, type: 2}
+  jumpSpeed: {fileID: 11400000, guid: 70b5c39f5f51cb74ca923a13173cfded, type: 2}
   playerScale: {fileID: 1838693807}
-  jumpSpeed: 3
   chainSaw: {fileID: 406401225}
 --- !u!58 &1838693809
 CircleCollider2D:
