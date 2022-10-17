@@ -695,7 +695,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a811cde149b2e41b19e131acb2c563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  failAS: {fileID: 406401230}
   otherCollider: {fileID: 406401228}
 --- !u!82 &406401230
 AudioSource:
@@ -1949,7 +1948,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1120547582
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3424,7 +3423,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score  '
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 146186526bc5eb148b906969d973e815, type: 2}
   m_sharedMaterial: {fileID: 7355685496493100210, guid: 146186526bc5eb148b906969d973e815, type: 2}
@@ -4287,6 +4286,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1663964098373906100, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663964098373906101, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663964098373906101, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 1663964098373906101, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663964098373906101, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663964098373906101, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663964098373906101, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
+      propertyPath: m_FillCenter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663964098373906101, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1663964098963027344, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
       propertyPath: m_UiScaleMode
       value: 1
@@ -4393,7 +4424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1663964098963027351, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1663964100098686406, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4407,6 +4438,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameSceneManagement, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 3731116286653567339, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
+      propertyPath: m_text
+      value: Score
+      objectReference: {fileID: 0}
+    - target: {fileID: 3963155392311687476, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
+      propertyPath: scoreV
+      value: 
+      objectReference: {fileID: 11400000, guid: 506b7b61c80bf994cabbf44471fb726b, type: 2}
+    - target: {fileID: 3963155392311687476, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
+      propertyPath: highScoreV
+      value: 
+      objectReference: {fileID: 11400000, guid: f2495d89fdc603446b16cb4778d51601, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
 --- !u!1 &1879095225 stripped
@@ -4911,6 +4954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highScore: {fileID: 1120547583}
+  score: {fileID: 1823282458}
 --- !u!1001 &2135220302203520359
 PrefabInstance:
   m_ObjectHideFlags: 0

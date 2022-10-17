@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7416383, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.11764706, g: 0.98039216, b: 0.24313726, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -429,7 +429,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7daab974fa9223640824519ec728d4c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highScore: {fileID: 1974319026}
+  scoreV: {fileID: 0}
+  highScoreV: {fileID: 11400000, guid: f2495d89fdc603446b16cb4778d51601, type: 2}
+  highScore: {fileID: 0}
+  score: {fileID: 0}
 --- !u!1 &796292838
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,8 +510,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1027374694}
-  - component: {fileID: 1027374696}
   - component: {fileID: 1027374695}
+  - component: {fileID: 1027374696}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -636,10 +639,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1027374693}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9bcbd42770c88c40a5ce2074a8dcd95, type: 3}
+  m_Script: {fileID: 11500000, guid: 264308bff19d9ce4ab9d417d5b6f13c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 8300000, guid: 76b53e46ff6ef6745931798de86f2bd4, type: 3}
+  mainMenuMusic: {fileID: 8300000, guid: eb50ae4393eff6045bce387e13552be5, type: 3}
 --- !u!1 &1202281599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,7 +1160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6419366, g: 0.7270144, b: 0.8679245, a: 1}
+  m_Color: {r: 0.76862746, g: 0.87058824, b: 0.105882354, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

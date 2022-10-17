@@ -34,6 +34,7 @@ public class GainScore : MonoBehaviour
     {
         score.value += scoreMultiplier.value;
         scoreText.text = score.value.ToString();
+        PlayerPrefs.SetInt("Score", score.value);
         if (score.value > PlayerPrefs.GetInt("highScore"))
         {
             PlayerPrefs.SetInt("highScore", score.value);
