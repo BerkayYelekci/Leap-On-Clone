@@ -16,13 +16,13 @@ public class PlayerMovement : MonoBehaviour
     public ScriptableBool isGameOver;
     public ScriptableBool isJumping;
     public ScriptableInt distanceToCenter;
+    public ScriptableFloat rotateSpeed;
 
     public Transform playerScale;
 
     public AudioSource colAS;
     public AudioClip colAC;
 
-    public float rotateSpeed; 
     float fallSpeed;
     public float jumpSpeed;
     float jumpTime;
@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
     {   
         isRelease = false;
         radius = Vector2.Distance(transform.position, chainSaw.transform.position);
-        angle += rotateSpeed * Time.deltaTime;
+        angle += rotateSpeed.value * Time.deltaTime;
         offset = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)) * radius;
         transform.position = center + offset;
     }
@@ -96,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isRelease = true;
         radius = Vector2.Distance(transform.position, chainSaw.transform.position);
-        angle += (rotateSpeed / 2) * Time.deltaTime;
+        angle += (rotateSpeed.value / 2) * Time.deltaTime;
         offset = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)) * radius;
         transform.position = center + offset;
         releaseTime -= Time.deltaTime;

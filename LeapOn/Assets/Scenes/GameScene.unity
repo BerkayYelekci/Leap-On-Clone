@@ -2839,6 +2839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isJumping: {fileID: 11400000, guid: 8a9f020b72c6c054298ebffeca723cfd, type: 2}
   gameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
+  rotateSpeed: {fileID: 11400000, guid: 69385b75659a82a4cab70a3fc91b3b94, type: 2}
 --- !u!4 &1726171444
 Transform:
   m_ObjectHideFlags: 0
@@ -3368,10 +3369,10 @@ MonoBehaviour:
   isGameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
   isJumping: {fileID: 11400000, guid: 8a9f020b72c6c054298ebffeca723cfd, type: 2}
   distanceToCenter: {fileID: 11400000, guid: c92926bffab5fdd4a90d676d4cdebdfc, type: 2}
+  rotateSpeed: {fileID: 11400000, guid: 69385b75659a82a4cab70a3fc91b3b94, type: 2}
   playerScale: {fileID: 1838693807}
   colAS: {fileID: 1838693812}
   colAC: {fileID: 8300000, guid: 11d45d742f65ed7448ed85aad1f39165, type: 3}
-  rotateSpeed: 1
   jumpSpeed: 3
   chainSaw: {fileID: 406401225}
 --- !u!58 &1838693809
