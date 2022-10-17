@@ -14,13 +14,11 @@ public class DestroyPlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             otherCollider.enabled = false;
-            // Setactive gameovercanvas
-            // Destroys player 
             // GAME OVER
             gameOver?.Invoke();
-            ////////////
-           
+            // Destroys player 
             collision.gameObject.SetActive(false);
+            ////////////
         }
     }
 

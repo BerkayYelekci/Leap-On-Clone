@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnObstacles : MonoBehaviour
 {
+    public ScriptableBool gameOver;
     float spawnTime;
     float spawnPosX, spawnPosY, posBorderX, posBorderY;
     int spawnArea;
@@ -18,7 +19,7 @@ public class SpawnObstacles : MonoBehaviour
     void Update()
     {
         spawnTime -= Time.deltaTime;
-        if (spawnTime <= 0)
+        if (spawnTime <= 0 && !gameOver.value)
         {
             SpawnObstacle();
         }
