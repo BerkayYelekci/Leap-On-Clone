@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public ScriptableBool isJumping;
     public ScriptableBool gameOver;
+    public ScriptableFloat rotateSpeed;
     private void OnEnable()
     {
         DestroyPlayer.gameOver += GameOver;
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
     {
         isJumping.value = false;
         gameOver.value = false;
+        rotateSpeed.value = 1;
     }
     void GameOver()
     {

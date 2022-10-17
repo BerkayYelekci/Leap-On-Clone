@@ -261,6 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpIcon: {fileID: 5059813206734522666}
   fastIcon: {fileID: 5059813207930697732}
+  rotateSpeed: {fileID: 11400000, guid: 69385b75659a82a4cab70a3fc91b3b94, type: 2}
 --- !u!1 &5059813206734522666
 GameObject:
   m_ObjectHideFlags: 0
