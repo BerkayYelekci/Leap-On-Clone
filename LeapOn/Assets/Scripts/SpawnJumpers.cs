@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnJumpers : MonoBehaviour
 {
+    public ScriptableBool gameOver;
     float time;
     private void Start()
     {
@@ -12,7 +13,7 @@ public class SpawnJumpers : MonoBehaviour
     private void Update()
     {
         time -= Time.deltaTime;
-        if (time <= 0)
+        if (time <= 0 && !gameOver.value)
         {
             SpawnJumper();
             time = 1;
