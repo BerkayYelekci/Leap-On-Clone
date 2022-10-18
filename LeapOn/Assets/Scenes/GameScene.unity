@@ -3102,6 +3102,7 @@ MonoBehaviour:
   score: {fileID: 11400000, guid: 506b7b61c80bf994cabbf44471fb726b, type: 2}
   highScore: {fileID: 11400000, guid: f2495d89fdc603446b16cb4778d51601, type: 2}
   scoreMultiplier: {fileID: 11400000, guid: 507f63278831f654cb041ed84760dc80, type: 2}
+  increaseMultiplier: {fileID: 11400000, guid: 603beadc1797d1d489402f2e11ec97ab, type: 2}
   scoreText: {fileID: 1823282458}
 --- !u!114 &1726171446
 MonoBehaviour:
