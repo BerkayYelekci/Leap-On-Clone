@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class ScoreDisplay : MonoBehaviour
+public class MainMenuScoreDisplay : MonoBehaviour
 {
     public TMP_Text highScore;
-    public TMP_Text score;
+
+
 
     void Start()
     {
-        score.text = "Your Score:  " +PlayerPrefs.GetInt("Score").ToString();
         highScore.text = "High Score:  " + PlayerPrefs.GetInt("highScore").ToString();
     }
 
-        
+   
 }
