@@ -2192,6 +2192,7 @@ MonoBehaviour:
   jumpPU: {fileID: 11400000, guid: c1f59658c8e5afb498ec91c59eacb983, type: 2}
   rotatePU: {fileID: 11400000, guid: 98c6ee1c348c2974688f5ad6526003fe, type: 2}
   destroyBlackPU: {fileID: 11400000, guid: f2ee6e5e47d7f13489883ba8a6151111, type: 2}
+  increaseMultiplierPU: {fileID: 11400000, guid: 603beadc1797d1d489402f2e11ec97ab, type: 2}
 --- !u!4 &1333440702
 Transform:
   m_ObjectHideFlags: 0

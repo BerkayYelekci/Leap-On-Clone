@@ -6,10 +6,9 @@ public class GainScore : MonoBehaviour
 {
     public ScriptableInt score, highScore;
     public ScriptableInt scoreMultiplier;
-    int incrementScore;
+    public ScriptableBool increaseMultiplier;
 
     public TMP_Text scoreText;
-
     private void Awake()
     {
         highScore.value = PlayerPrefs.GetInt("highScore");
@@ -33,7 +32,14 @@ public class GainScore : MonoBehaviour
     }
     void Gain()
     {
-        score.value += scoreMultiplier.value;
+        if (!increaseMultiplier.value)
+        {
+            score.value += scoreMultiplier.value;
+        }
+        else if (increaseMultiplier)
+        {
+            score.value += (scoreMultiplier.value * 2);
+        }
         scoreText.text = score.value.ToString();
         PlayerPrefs.SetInt("Score", score.value);
         if (score.value > PlayerPrefs.GetInt("highScore"))
@@ -45,8 +51,5 @@ public class GainScore : MonoBehaviour
     void Multiplier()
     {
         scoreMultiplier.value += 1;
-        // Multiply number appears in UI
-
-        ////////////////////////////////
     }
 }
