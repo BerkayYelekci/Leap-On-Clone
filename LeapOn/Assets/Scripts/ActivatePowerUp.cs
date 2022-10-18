@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ActivatePowerUp : MonoBehaviour
 {
+    public static Action stopMultiplierPU;
     public ScriptableFloat rotateSpeed, jumpSpeed;
     public ScriptableBool jumpPU, rotatePU, destroyBlackPU, increaseMultiplierPU;
     float powerUpTime, increaseMultiplierPowerUpTime;
@@ -81,6 +83,7 @@ public class ActivatePowerUp : MonoBehaviour
             increaseMultiplierPowerUpTime -= Time.deltaTime;
             if (increaseMultiplierPowerUpTime <= 0)
             {
+                stopMultiplierPU?.Invoke();
                 increaseMultiplierPU.value = false;
                 increaseMultiplierPowerUpTime = 7f;
             }

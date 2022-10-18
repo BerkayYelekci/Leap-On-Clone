@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 233545508}
   - component: {fileID: 233545510}
   - component: {fileID: 233545509}
+  - component: {fileID: 233545511}
   m_Layer: 0
   m_Name: MultiplierText
   m_TagString: Untagged
@@ -351,6 +352,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233545507}
   m_CullTransparentMesh: 1
+--- !u!95 &233545511
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233545507}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6ba01e006ede4b34faa902ed4e62cdff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &245639799
 GameObject:
   m_ObjectHideFlags: 0
