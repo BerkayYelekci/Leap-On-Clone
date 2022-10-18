@@ -5,31 +5,36 @@ using UnityEngine;
 public class ActivatePowerUp : MonoBehaviour
 {
     public ScriptableFloat rotateSpeed, jumpSpeed;
-    public ScriptableBool jumpPU, rotatePU, destroyBlackPU;
-    float powerUpTime;
+    public ScriptableBool jumpPU, rotatePU, destroyBlackPU, increaseMultiplierPU;
+    float powerUpTime, increaseMultiplierPowerUpTime;
     private void Awake()
     {
         powerUpTime = 5f;
+        increaseMultiplierPowerUpTime = 7f;
         jumpPU.value = false;
         rotatePU.value = false;
+        increaseMultiplierPU.value = false;
     }
     private void OnEnable()
     {
         PowerUp.rotatePowerUpAction += IncreaseRotateSpeed;
         PowerUp.jumpPowerUpAction += IncreaseJumpPower;
         PowerUp.destroyBlackAction += DestroyBlackObjects;
+        PowerUp.increaseMultiplierAction += IncreaseMultiplier;
     }
     private void OnDisable()
     {
         PowerUp.rotatePowerUpAction -= IncreaseRotateSpeed;
         PowerUp.jumpPowerUpAction -= IncreaseJumpPower;
         PowerUp.destroyBlackAction -= DestroyBlackObjects;
+        PowerUp.increaseMultiplierAction -= IncreaseMultiplier;
     }
     private void Update()
     {
         RotatePU();
         JumpPU();
         DestroyBlackPU();
+        IncreaseMultiplierPU();
     }
     void RotatePU()
     {
@@ -69,6 +74,18 @@ public class ActivatePowerUp : MonoBehaviour
             }
         }
     }
+    void IncreaseMultiplierPU()
+    {
+        if (increaseMultiplierPU.value)
+        {
+            increaseMultiplierPowerUpTime -= Time.deltaTime;
+            if (increaseMultiplierPowerUpTime <= 0)
+            {
+                increaseMultiplierPU.value = false;
+                increaseMultiplierPowerUpTime = 7f;
+            }
+        }
+    }
     void IncreaseRotateSpeed()
     {
         rotatePU.value = true;
@@ -85,5 +102,10 @@ public class ActivatePowerUp : MonoBehaviour
     {
         destroyBlackPU.value = false;
         powerUpTime = 5f;
+    }
+    void IncreaseMultiplier()
+    {
+        increaseMultiplierPU.value = true;
+        increaseMultiplierPowerUpTime = 7f;
     }
 }
