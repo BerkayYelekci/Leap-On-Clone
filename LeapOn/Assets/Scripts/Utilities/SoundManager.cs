@@ -43,7 +43,6 @@ public class SoundManager : MonoBehaviour
             if (myAS.clip == gameMusic) 
             {
                 myAS.Stop();
-                Debug.Log("MainMusic has stopped");
             }
             myAS.PlayOneShot(failAC);
         }
