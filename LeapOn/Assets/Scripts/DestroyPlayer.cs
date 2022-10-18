@@ -30,7 +30,7 @@ public class DestroyPlayer : MonoBehaviour
             }   
             else if (!gameObject.CompareTag("Center") && !destroyPlayer.value)
             {
-                gameObject.SetActive(false);
+                transform.parent.gameObject.SetActive(false);
             }
         }
     }
