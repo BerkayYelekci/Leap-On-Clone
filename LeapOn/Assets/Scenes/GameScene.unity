@@ -3070,6 +3070,7 @@ MonoBehaviour:
   gameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
   rotateSpeed: {fileID: 11400000, guid: 69385b75659a82a4cab70a3fc91b3b94, type: 2}
   jumpSpeed: {fileID: 11400000, guid: 70b5c39f5f51cb74ca923a13173cfded, type: 2}
+  score: {fileID: 11400000, guid: 506b7b61c80bf994cabbf44471fb726b, type: 2}
 --- !u!4 &1726171444
 Transform:
   m_ObjectHideFlags: 0

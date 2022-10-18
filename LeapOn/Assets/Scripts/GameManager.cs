@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public ScriptableBool isJumping, destroyPlayer;
-    public ScriptableBool gameOver;
+    public ScriptableBool isJumping, destroyPlayer, gameOver;
     public ScriptableFloat rotateSpeed, jumpSpeed;
+    public ScriptableInt score;
     private void OnEnable()
     {
         DestroyPlayer.gameOver += GameOver;
@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     }
     void Awake()
     {
+        score.value = 0;
         destroyPlayer.value = true;
         isJumping.value = false;
         gameOver.value = false;

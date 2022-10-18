@@ -11,7 +11,5 @@ public class ScoreDisplay : MonoBehaviour
     {
         score.text =  PlayerPrefs.GetInt("Score").ToString();
         highScore.text = "High Score:  " + PlayerPrefs.GetInt("highScore").ToString();
-    }
-
-        
+    }   
 }

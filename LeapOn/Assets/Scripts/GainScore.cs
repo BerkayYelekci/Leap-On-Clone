@@ -17,6 +17,7 @@ public class GainScore : MonoBehaviour
     private void Start()
     {
         score.value = 0;
+        PlayerPrefs.SetInt("Score", score.value);
         // It will increment when player passes the multiplier line
         scoreMultiplier.value = 0;
     }
