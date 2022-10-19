@@ -26,20 +26,19 @@ public class PowerUpE : MonoBehaviour
         PowerUp.destroyInstantAction -= PoUPEffects;
     }
 
-
-    private void ImpactEffect()
-    {
-        GameObject explosion = Instantiate(powerUpParticles, transform.position, Quaternion.identity);
-        explosion.GetComponent<ParticleSystem>().Play();
-        Destroy(explosion, .1f);
-    }
-
     public void PoUPEffects()
     {
         ImpactEffect();
         Vibrate();
     }
 
+    private void ImpactEffect()
+    {
+        GameObject explosion = Instantiate(powerUpParticles, transform.position, Quaternion.identity);
+        explosion.GetComponent<ParticleSystem>().Play();
+        Debug.Log("Particle system works");
+        Destroy(explosion, .15f);
+    }
 
 #if UNITY_ANDROID && !UNITY_EDITOR
     public static AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");

@@ -2146,7 +2146,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1333440702}
   - component: {fileID: 1333440701}
-  - component: {fileID: 1333440703}
   m_Layer: 0
   m_Name: PowerUpManager
   m_TagString: Untagged
@@ -2187,19 +2186,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1333440703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1333440700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11fe233a20ad27a45999864798e02134, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUpParticles: {fileID: 1497369443069895340, guid: 53b9fe2a0a877a240a0fb72e79717027, type: 3}
 --- !u!1001 &1337076705
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3132,7 +3118,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingOrder: -5
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.022997461, g: 0.7169812, b: 0.040791873, a: 1}
   m_FlipX: 0
@@ -3955,7 +3941,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -4
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.008348133, g: 0.6320754, b: 0.030492269, a: 1}
   m_FlipX: 0
@@ -4625,7 +4611,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -3
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.13412243, g: 0.5188679, b: 0.14951223, a: 1}
   m_FlipX: 0
