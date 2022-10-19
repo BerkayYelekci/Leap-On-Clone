@@ -36,7 +36,6 @@ public class PowerUpE : MonoBehaviour
     {
         GameObject explosion = Instantiate(powerUpParticles, transform.position, Quaternion.identity);
         explosion.GetComponent<ParticleSystem>().Play();
-        Debug.Log("Particle system works");
         Destroy(explosion, .15f);
     }
 

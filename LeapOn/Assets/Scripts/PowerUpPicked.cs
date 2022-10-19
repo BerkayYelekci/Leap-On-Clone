@@ -5,25 +5,43 @@ using UnityEngine;
 public class PowerUpPicked : MonoBehaviour
 {
     public GameObject protectImage;
+    public GameObject speedUpTrail;
+    TrailRenderer normalTrail;
     private void Start()
     {
+        speedUpTrail.gameObject.SetActive(false);
         protectImage.gameObject.SetActive(false);
+        normalTrail = GetComponent<TrailRenderer>();
     }
     private void OnEnable()
     {
-        PowerUp.destroyBlackAction += PlayAnim;
-        ActivatePowerUp.stopDestroyBlackPU += StopAnim;
+        PowerUp.destroyBlackAction += PlayProtectAnim;
+        ActivatePowerUp.stopDestroyBlackPU += StopProtectAnim;
+        PowerUp.rotatePowerUpAction += PlaySpeedAnim;
+        ActivatePowerUp.stopSpeedUpPU += StopSpeedAnim;
     }
     private void OnDisable()
     {
-        PowerUp.destroyBlackAction -= PlayAnim;
-        ActivatePowerUp.stopDestroyBlackPU -= StopAnim;
+        PowerUp.destroyBlackAction -= PlayProtectAnim;
+        ActivatePowerUp.stopDestroyBlackPU -= StopProtectAnim;
+        PowerUp.rotatePowerUpAction -= PlaySpeedAnim;
+        ActivatePowerUp.stopSpeedUpPU -= StopSpeedAnim;
     }
-    void PlayAnim()
+    void PlaySpeedAnim()
+    {
+        normalTrail.enabled = false;
+        speedUpTrail.gameObject.SetActive(true);
+    }
+    void StopSpeedAnim()
+    {
+        normalTrail.enabled = true;
+        speedUpTrail.gameObject.SetActive(false);
+    }
+    void PlayProtectAnim()
     {
         protectImage.gameObject.SetActive(true);
     }
-    void StopAnim()
+    void StopProtectAnim()
     {
         protectImage.gameObject.SetActive(false);
     }
