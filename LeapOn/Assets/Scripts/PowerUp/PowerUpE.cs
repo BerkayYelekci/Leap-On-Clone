@@ -19,11 +19,11 @@ public class PowerUpE : MonoBehaviour
 
     private void OnDisable()
     {
-        PowerUp.rotatePowerUpAction += PoUPEffects;
-        PowerUp.jumpPowerUpAction += PoUPEffects;
-        PowerUp.destroyBlackAction += PoUPEffects;
-        PowerUp.increaseMultiplierAction += PoUPEffects;
-        PowerUp.destroyInstantAction += PoUPEffects;
+        PowerUp.rotatePowerUpAction -= PoUPEffects;
+        PowerUp.jumpPowerUpAction -= PoUPEffects;
+        PowerUp.destroyBlackAction -= PoUPEffects;
+        PowerUp.increaseMultiplierAction -= PoUPEffects;
+        PowerUp.destroyInstantAction -= PoUPEffects;
     }
 
 
