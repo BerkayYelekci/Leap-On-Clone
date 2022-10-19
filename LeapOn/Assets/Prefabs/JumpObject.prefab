@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2135220302027190668}
   - component: {fileID: 2135220302027190666}
   - component: {fileID: -4023639354543763266}
+  - component: {fileID: 5877841221007032110}
   m_Layer: 0
   m_Name: JumpObject
   m_TagString: White
@@ -115,3 +116,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impactParticles: {fileID: 4186397633849351563, guid: 97aa51d5424b2494eb9242a4c32d287e, type: 3}
+--- !u!114 &5877841221007032110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135220302027190669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52bb72dad3ad469498279aca584891b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
+  fallTime: 5
