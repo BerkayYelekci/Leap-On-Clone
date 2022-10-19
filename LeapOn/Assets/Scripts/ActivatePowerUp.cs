@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ActivatePowerUp : MonoBehaviour
 {
-    public static Action stopMultiplierPU;
+    public static Action stopMultiplierPU, stopDestroyBlackPU;
     public ScriptableFloat rotateSpeed, jumpSpeed;
     public ScriptableBool jumpPU, rotatePU, destroyBlackPU, increaseMultiplierPU;
     float powerUpTime, increaseMultiplierPowerUpTime;
@@ -71,6 +71,7 @@ public class ActivatePowerUp : MonoBehaviour
             powerUpTime -= Time.deltaTime;
             if (powerUpTime <= 0)
             {
+                stopDestroyBlackPU?.Invoke();
                 destroyBlackPU.value = true;
                 powerUpTime = 5f;
             }
