@@ -9,7 +9,7 @@ public class ScoreDisplay : MonoBehaviour
 
     void Start()
     {
-        score.text = "Your Score:  " +PlayerPrefs.GetInt("Score").ToString();
-        highScore.text = "High Score:  " + PlayerPrefs.GetInt("highScore").ToString();
+        score.text = "Your Score:\n" +PlayerPrefs.GetInt("Score").ToString();
+        highScore.text = "High Score:\n" + PlayerPrefs.GetInt("highScore").ToString();
     }   
 }
