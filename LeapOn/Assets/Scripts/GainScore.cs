@@ -8,9 +8,11 @@ public class GainScore : MonoBehaviour
     public ScriptableInt scoreMultiplier;
     public ScriptableBool increaseMultiplier;
 
+    public Animator highScoreAnimator;
     public TMP_Text scoreText;
     private void Awake()
     {
+        highScoreAnimator.enabled = false;
         highScore.value = PlayerPrefs.GetInt("highScore");
     }
     private void Start()
@@ -46,6 +48,7 @@ public class GainScore : MonoBehaviour
         {
             PlayerPrefs.SetInt("highScore", score.value);
             highScore.value = score.value;
+            highScoreAnimator.enabled = true;
         }
     }
     void Multiplier()
