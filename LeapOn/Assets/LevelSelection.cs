@@ -16,7 +16,6 @@ public class LevelSelection : MonoBehaviour
         if (levelHard == true)
         {
             hardModeButton.interactable = true;
-            Debug.Log("Hard mode unlocked.");
         }
     }
   
