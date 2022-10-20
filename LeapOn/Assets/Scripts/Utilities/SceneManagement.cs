@@ -6,7 +6,9 @@ using DG.Tweening;
 public class SceneManagement : MonoBehaviour
 {
     public RectTransform mainMenu;
- 
+
+    public GameObject mainMenuObj;
+    public GameObject levelPanel;
 
 
     private void Start()
@@ -14,9 +16,10 @@ public class SceneManagement : MonoBehaviour
         MenuAnimation();
     }
 
-    public void PlayGame()
+    public void SelectLevel()
     {
-        SceneManager.LoadScene(1);
+        levelPanel.SetActive(true);
+        mainMenuObj.SetActive(false);
     }
 
     public void  MenuAnimation()
@@ -24,6 +27,10 @@ public class SceneManagement : MonoBehaviour
         mainMenu.DOLocalMove(Vector2.zero, 1f);
     }
 
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(1);
+    }
     
 
 }
