@@ -12,7 +12,7 @@ public class HardModeUnlocker : MonoBehaviour
     {
         scoreToUnlock = PlayerPrefs.GetInt("highScore");
         Debug.Log("Score Unlocked."+scoreToUnlock);
-        if (scoreToUnlock >= 20)
+        if (scoreToUnlock >= 100)
         {
             HardModeUnlocked();
         }
