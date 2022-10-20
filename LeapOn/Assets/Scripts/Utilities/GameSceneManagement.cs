@@ -18,7 +18,7 @@ public class GameSceneManagement : MonoBehaviour
 
     public void ReplayGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void GameOverUI()
