@@ -29,12 +29,14 @@ public class GainScore : MonoBehaviour
     private void OnEnable()
     {
         PlayerMovement.gainScore += Gain;
+        HardModeMovement.gainScore += Gain;
         MultiplyScore.multiplyTheScore += Multiplier;
     }
     private void OnDisable()
     {
-       PlayerMovement.gainScore -= Gain;
-       MultiplyScore.multiplyTheScore -= Multiplier;
+        PlayerMovement.gainScore -= Gain;
+        HardModeMovement.gainScore -= Gain;
+        MultiplyScore.multiplyTheScore -= Multiplier;
     }
     void Gain()
     {

@@ -28,12 +28,14 @@ public class SoundManager : MonoBehaviour
     {
         DestroyPlayer.gameOver += DestroyPlayerSound;
         PlayerMovement.collisionSound += CollectibleSound;
+        HardModeMovement.collisionSound += CollectibleSound;
     }
 
     private void OnDisable()
     {
         DestroyPlayer.gameOver -= DestroyPlayerSound;
         PlayerMovement.collisionSound -= CollectibleSound;
+        HardModeMovement.collisionSound -= CollectibleSound;
     }
 
     private void DestroyPlayerSound()
