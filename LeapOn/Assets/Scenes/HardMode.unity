@@ -3177,7 +3177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
-  score: {fileID: 0}
+  score: {fileID: 11400000, guid: 506b7b61c80bf994cabbf44471fb726b, type: 2}
 --- !u!114 &1631499369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3207,7 +3207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
-  score: {fileID: 0}
+  score: {fileID: 11400000, guid: 506b7b61c80bf994cabbf44471fb726b, type: 2}
   center: {fileID: 406401227}
 --- !u!114 &1631499371
 MonoBehaviour:
