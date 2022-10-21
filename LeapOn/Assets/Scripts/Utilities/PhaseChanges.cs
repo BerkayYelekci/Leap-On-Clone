@@ -22,7 +22,7 @@ public class PhaseChanges : MonoBehaviour
     }
     void ChangePhase()
     {
-        if (score.value >= toPhase2 )
+        if (score.value >= toPhase2 && score.value < toPhase3)
         {
             phase1.gameObject.SetActive(false);
             phase2.gameObject.SetActive(true);
