@@ -2363,11 +2363,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4160782935757613916, guid: a7d997e87192b63489b27b1519c6371f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4160782935757613916, guid: a7d997e87192b63489b27b1519c6371f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4160782935757613916, guid: a7d997e87192b63489b27b1519c6371f, type: 3}
       propertyPath: m_LocalScale.z
@@ -3177,6 +3177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
+  score: {fileID: 0}
 --- !u!114 &1631499369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3206,6 +3207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
+  score: {fileID: 0}
   center: {fileID: 406401227}
 --- !u!114 &1631499371
 MonoBehaviour:
@@ -3861,7 +3863,7 @@ PrefabInstance:
       objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 1663964098373906101, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
       propertyPath: m_Color.a
-      value: 0.36862746
+      value: 0.19607843
       objectReference: {fileID: 0}
     - target: {fileID: 1663964098373906101, guid: 95d096e6c712f1046a1ce2c6f0aa4efd, type: 3}
       propertyPath: m_Color.b
@@ -4181,9 +4183,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1838693807}
   - component: {fileID: 1838693806}
-  - component: {fileID: 1838693808}
   - component: {fileID: 1838693811}
-  - component: {fileID: 1838693814}
+  - component: {fileID: 1838693818}
+  - component: {fileID: 1838693817}
   - component: {fileID: 1838693816}
   - component: {fileID: 1838693809}
   - component: {fileID: 1838693810}
@@ -4269,27 +4271,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1838693808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838693805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 443039aac570c004c9f72e71ec2c552b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallTime: 1.1
-  isGameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
-  jumpPU: {fileID: 11400000, guid: c1f59658c8e5afb498ec91c59eacb983, type: 2}
-  isJumping: {fileID: 11400000, guid: 8a9f020b72c6c054298ebffeca723cfd, type: 2}
-  distanceToCenter: {fileID: 11400000, guid: c92926bffab5fdd4a90d676d4cdebdfc, type: 2}
-  rotateSpeed: {fileID: 11400000, guid: 69385b75659a82a4cab70a3fc91b3b94, type: 2}
-  jumpSpeed: {fileID: 11400000, guid: 70b5c39f5f51cb74ca923a13173cfded, type: 2}
-  playerScale: {fileID: 1838693807}
-  chainSaw: {fileID: 406401225}
 --- !u!58 &1838693809
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4535,20 +4516,6 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!114 &1838693814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838693805}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56a910a8c67f2dc4ba00395f7e91c872, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shakeDuration: 1
-  shakeIntensity: 1.25
 --- !u!96 &1838693815
 TrailRenderer:
   serializedVersion: 2
@@ -4671,6 +4638,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   protectImage: {fileID: 531579922}
   speedUpTrail: {fileID: 821584432}
+--- !u!114 &1838693817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838693805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc338b6baa2e88d42a7850e9a46af984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallTime: 1.1
+  isGameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
+  jumpPU: {fileID: 11400000, guid: c1f59658c8e5afb498ec91c59eacb983, type: 2}
+  isJumping: {fileID: 11400000, guid: 8a9f020b72c6c054298ebffeca723cfd, type: 2}
+  distanceToCenter: {fileID: 11400000, guid: c92926bffab5fdd4a90d676d4cdebdfc, type: 2}
+  rotateSpeed: {fileID: 11400000, guid: 69385b75659a82a4cab70a3fc91b3b94, type: 2}
+  jumpSpeed: {fileID: 11400000, guid: 70b5c39f5f51cb74ca923a13173cfded, type: 2}
+  chainSaw: {fileID: 406401225}
+--- !u!114 &1838693818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838693805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6663d0b574f927b4e937330ecb28a56b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maskScale: {fileID: 2045377086}
+  distanceToCenter: {fileID: 11400000, guid: c92926bffab5fdd4a90d676d4cdebdfc, type: 2}
 --- !u!1 &1839660748
 GameObject:
   m_ObjectHideFlags: 0
@@ -5193,6 +5194,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &2045377086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4160782935757613918, guid: a7d997e87192b63489b27b1519c6371f, type: 3}
+  m_PrefabInstance: {fileID: 1189648682}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2058039980
 GameObject:
   m_ObjectHideFlags: 0
