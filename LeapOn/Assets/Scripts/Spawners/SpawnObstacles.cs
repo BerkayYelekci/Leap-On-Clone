@@ -5,16 +5,38 @@ using UnityEngine;
 public class SpawnObstacles : MonoBehaviour
 {
     public ScriptableBool gameOver;
-    float spawnTime;
+    public ScriptableInt score;
+    float spawnTime, spawnTimeValue;
     float spawnPosX, spawnPosY, posBorderX, posBorderY;
     int spawnArea;
     public Transform center;
+    private void OnEnable()
+    {
+        GainScore.onGainScore += ChangeSpawnTime;
+    }
+    private void OnDisable()
+    {
+        GainScore.onGainScore -= ChangeSpawnTime;
+
+    }
+    void ChangeSpawnTime()
+    {
+        if (score.value >= 75)
+        {
+            spawnTimeValue = 1.75f;
+        }
+        else if (score.value >= 175)
+        {
+            spawnTimeValue = 1.5f;
+        }
+    }
     void Start()
     {
         posBorderX = 1.5f;
         posBorderY = 7f;
         spawnArea = Random.Range(0,4);
-        spawnTime = 2f;
+        spawnTimeValue = 2f;
+        spawnTime = spawnTimeValue;
     }
     void Update()
     {
@@ -36,7 +58,7 @@ public class SpawnObstacles : MonoBehaviour
             RandomSpawnPos();
             SpawnFunc();
             //////////////
-            spawnTime = 2f;
+            spawnTime = spawnTimeValue;
         }
         // Area II. of the coordinate system
         else if (spawnArea == 1)
@@ -47,7 +69,7 @@ public class SpawnObstacles : MonoBehaviour
             RandomSpawnPos();
             SpawnFunc();
             //////////////
-            spawnTime = 2f;
+            spawnTime = spawnTimeValue;
         }
         // Area III. of the coordinate system
         else if (spawnArea == 2)
@@ -58,7 +80,7 @@ public class SpawnObstacles : MonoBehaviour
             RandomSpawnPos();
             SpawnFunc();
             //////////////
-            spawnTime = 2f;
+            spawnTime = spawnTimeValue;
         }
         // Area IV. of the coordinate system
         else if (spawnArea == 3)
@@ -69,7 +91,7 @@ public class SpawnObstacles : MonoBehaviour
             RandomSpawnPos(); 
             SpawnFunc();
             //////////////
-            spawnTime = 2f;
+            spawnTime = spawnTimeValue;
         }
     }
     // Randomly spawn obstacle (Position-Wise)

@@ -5,10 +5,32 @@ using UnityEngine;
 public class SpawnJumpers : MonoBehaviour
 {
     public ScriptableBool gameOver;
-    float time;
+    public ScriptableInt score;
+    float time, timeValue;
+    private void OnEnable()
+    {
+        GainScore.onGainScore += ChangeSpawnTime;
+    }
+    private void OnDisable()
+    {
+        GainScore.onGainScore -= ChangeSpawnTime;
+
+    }
+    void ChangeSpawnTime()
+    {
+        if (score.value >= 75)
+        {
+            timeValue = .75f;
+        }
+        else if (score.value >= 175)
+        {
+            timeValue = .7f;
+        }
+    }
     private void Start()
     {
-        time = 1;
+        timeValue = 1;
+        time = timeValue;
     }
     private void Update()
     {
@@ -16,7 +38,7 @@ public class SpawnJumpers : MonoBehaviour
         if (time <= 0 && !gameOver.value)
         {
             SpawnJumper();
-            time = 1;
+            time = timeValue;
         }
     }
     void SpawnJumper()
