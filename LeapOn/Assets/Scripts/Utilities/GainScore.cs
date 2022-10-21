@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
+
 public class GainScore : MonoBehaviour
 {
     public ScriptableInt score, highScore;
     public ScriptableInt scoreMultiplier;
     public ScriptableBool increaseMultiplier;
+
+    public static Action onGainScore;
 
     public Animator highScoreAnimator;
     public TMP_Text scoreText;
@@ -50,6 +54,7 @@ public class GainScore : MonoBehaviour
             PlayerPrefs.SetInt("highScore", score.value);
             highScore.value = score.value;
         }
+        onGainScore?.Invoke();
     }
     void Multiplier()
     {

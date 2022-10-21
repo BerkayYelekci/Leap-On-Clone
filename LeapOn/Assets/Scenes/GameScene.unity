@@ -3631,7 +3631,7 @@ MonoBehaviour:
   parentObject: {fileID: 245639800}
   pooledObjects: []
   objectToPool: {fileID: 2135220302027190669, guid: d4802f3c693c32c49b218660d52b513a, type: 3}
-  amountToPool: 20
+  amountToPool: 35
 --- !u!114 &1631499368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3645,6 +3645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
+  score: {fileID: 11400000, guid: 506b7b61c80bf994cabbf44471fb726b, type: 2}
 --- !u!114 &1631499369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3660,7 +3661,7 @@ MonoBehaviour:
   parentObject: {fileID: 2060033661}
   pooledObjects: []
   objectToPool: {fileID: 8404062655721370613, guid: 3e837f173a492ae448332127b7aaa311, type: 3}
-  amountToPool: 20
+  amountToPool: 35
 --- !u!114 &1631499370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3674,6 +3675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 11400000, guid: 1dd4a75cca40e454e907c843705545b0, type: 2}
+  score: {fileID: 11400000, guid: 506b7b61c80bf994cabbf44471fb726b, type: 2}
   center: {fileID: 406401227}
 --- !u!114 &1631499371
 MonoBehaviour:
@@ -4035,6 +4037,7 @@ GameObject:
   - component: {fileID: 1726171446}
   - component: {fileID: 1726171447}
   - component: {fileID: 1726171448}
+  - component: {fileID: 1726171449}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4140,6 +4143,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceToCenter: {fileID: 11400000, guid: c92926bffab5fdd4a90d676d4cdebdfc, type: 2}
   farthestLeap: {fileID: 11400000, guid: 1456a1384ac3cc247a8bb140c7f8db6c, type: 2}
+--- !u!114 &1726171449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726171442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79ed43c5c1c44c04ead716b3d0b8f042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phase1: {fileID: 2116993100}
+  phase2: {fileID: 1312730023}
+  phase3: {fileID: 1811780859}
+  score: {fileID: 11400000, guid: 506b7b61c80bf994cabbf44471fb726b, type: 2}
 --- !u!1 &1736258294
 GameObject:
   m_ObjectHideFlags: 0
@@ -4449,7 +4468,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -55.25}
+  m_AnchoredPosition: {x: 0, y: -120}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1823282458
