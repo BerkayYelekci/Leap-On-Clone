@@ -32,7 +32,7 @@ public class JumperMovement : MonoBehaviour
             {
                 FallOnGround();
             }
-        }      
+        }
     }
     private void OnEnable()
     {
@@ -57,5 +57,9 @@ public class JumperMovement : MonoBehaviour
     void DistanceToCenter()
     {
         distanceToCenter = Vector2.Distance(transform.position, center);
+        if (gameObject.transform.position.x == 0 && gameObject.transform.position.y == 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
